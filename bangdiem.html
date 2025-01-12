@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điểm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            border: none;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            background-color: #e8f0fe;
+        }
+
+        tfoot {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .award {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bảng Điểm</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Môn học</th>
+                <th>TX1</th>
+                <th>TX2</th>
+                <th>TX3</th>
+                <th>TX4</th>
+                <th>Giữa kỳ (x2)</th>
+                <th>Cuối kỳ (x3)</th>
+                <th>Trung bình</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Toán</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+            <tr>
+                <td>Vật lý</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+            <tr>
+                <td>Hóa học</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+            <tr>
+                <td>Sinh học</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+            <tr>
+                <td>Ngữ văn</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+            <tr>
+                <td>Lịch sử</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+            <tr>
+                <td>Tiếng Anh</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+            <tr>
+                <td>Công nghệ</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+            <tr>
+                <td>ANQP</td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="1"></td>
+                <td><input type="text" class="score" data-weight="2"></td>
+                <td><input type="text" class="score" data-weight="3"></td>
+                <td class="average">0.0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="7">Trung bình toàn bộ môn</td>
+                <td id="overall-average">0.0</td>
+            </tr>
+            <tr>
+                <td colspan="7">Danh hiệu</td>
+                <td id="award" class="award">Khá</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        function calculateRowAverage(row) {
+            const inputs = row.querySelectorAll('.score');
+            let total = 0;
+            let weightSum = 0;
+
+            inputs.forEach(input => {
+                const value = parseFloat(input.value);
+                const weight = parseInt(input.dataset.weight);
+
+                if (!isNaN(value)) {
+                    total += value * weight;
+                    weightSum += weight;
+                }
+            });
+
+            const averageCell = row.querySelector('.average');
+            const average = weightSum > 0 ? (total / weightSum) : 0;
+            averageCell.textContent = average.toFixed(1);
+
+            return average;
+        }
+
+        function calculateOverallAverage() {
+            const rows = document.querySelectorAll('tbody tr');
+            let totalAverage = 0;
+            let subjectCount = 0;
+            let excellentCount = 0;
+            let goodCount = 0;
+
+            rows.forEach(row => {
+                const average = calculateRowAverage(row);
+                if (average > 0) {
+                    totalAverage += average;
+                    subjectCount++;
+                    if (average >= 9) excellentCount++;
+                    else if (average >= 8) goodCount++;
+                }
+            });
+
+            const overallAverage = subjectCount > 0 ? (totalAverage / subjectCount) : 0;
+            document.getElementById('overall-average').textContent = overallAverage.toFixed(1);
+
+            // Determine award
+            let award = 'Khá';
+            if (overallAverage > 6.5) {
+                if (excellentCount >= 6) {
+                    award = 'Xuất sắc';
+                } else if (goodCount >= 6) {
+                    award = 'Giỏi';
+                }
+            }
+            document.getElementById('award').textContent = award;
+        }
+
+        document.querySelectorAll('.score').forEach(input => {
+            input.addEventListener('input', () => {
+                calculateOverallAverage();
+            });
+        });
+    </script>
+</body>
+</html>
